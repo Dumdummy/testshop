@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.admin-header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.admin-header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.admin-menu li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.admin-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-menu li a:hover {
+    text-decoration: underline;
+}
+
+.admin-main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border: 1px solid #ccc;
+}

@@ -7,6 +7,24 @@ require_once __DIR__ . "/../config/db.php";
 // 관리자 전용 헤더 파일 포함
 include_once __DIR__ . "/admin_header.php";
 
+// 관리자 권한 부여
+if (isset($_GET['make_admin'])) {
+    $userId = (int) $_GET['make_admin'];
+    $stmt = $pdo->prepare("UPDATE users SET is_admin = 1 WHERE id = ?");
+    $stmt->execute([$userId]);
+    header("Location: user_manage.php"); // 업데이트 후 페이지 새로고침
+    exit;
+}
+
+// 관리자 권한 해제
+if (isset($_GET['remove_admin'])) {
+    $userId = (int) $_GET['remove_admin'];
+    $stmt = $pdo->prepare("UPDATE users SET is_admin = 0 WHERE id = ?");
+    $stmt->execute([$userId]);
+    header("Location: user_manage.php"); // 업데이트 후 페이지 새로고침
+    exit;
+}
+
 // 회원 목록 조회
 $stmt = $pdo->query("SELECT id, username, email, is_admin FROM users ORDER BY id DESC");
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);

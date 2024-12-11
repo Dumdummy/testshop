@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($admin) {
             // 비밀번호 확인
             // 현재는 비밀번호를 단순 비교하고 있으나, 보안을 위해 password_verify 사용 권장
-            // if (password_verify($password, $admin['password'])) {
-            if ($admin['password'] === $password) {
+            if (password_verify($password, $admin['password'])) {
+            // if ($admin['password'] === $password) {
                 // 로그인 성공: 세션에 관리자 정보 저장
                 $_SESSION['user_id'] = $admin['id'];
                 $_SESSION['username'] = $admin['username'];

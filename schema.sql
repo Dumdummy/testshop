@@ -90,7 +90,7 @@ INSERT INTO categories (name) VALUES ('전자제품'), ('의류'), ('식품'), (
 
 -- 관리자 계정 예시 (비밀번호 해시 필요)
 -- password_hash('admin123', PASSWORD_BCRYPT) 결과를 'admin_hashed_value' 대신 넣는것이 보안상 좋음.
-INSERT INTO users (username, email, password, phone, is_admin) VALUES ('admin', 'admin@admin.com', '1234', '010-0000-0000', 1);
+INSERT INTO users (username, email, password, phone, is_admin) VALUES ('admin', 'admin@admin.com', '$2y$10$TvQrzd.dje1H8BXFhp.mp.8fSzsq18iUhcaM1G1AkJk55y9dZ2PpW', '010-0000-0000', 1);
 
 -- 샘플 상품
 INSERT INTO products (name, price, description, category_id) VALUES

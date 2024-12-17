@@ -2,8 +2,8 @@
 // db.php: 데이터베이스 연결 설정
 $host = "localhost";     // DB 서버 호스트
 $dbname = "shopping_db"; // 사용 DB명
-$user = "shopp";       // DB 사용자명
-$pass = "1q2w3e4r!";   // DB 비밀번호
+$user = "root";       // DB 사용자명
+$pass = "1234";   // DB 비밀번호
 
 try {
     // PDO 객체 생성 및 UTF-8 인코딩 설정
